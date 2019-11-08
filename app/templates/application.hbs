@@ -1,6 +1,10 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="links">
+  <LinkTo @route="color-room">Color Room</LinkTo>
+  <LinkTo @route="class-room">Class Room</LinkTo>
+</div>
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>
+
 

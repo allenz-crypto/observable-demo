@@ -1,0 +1,23 @@
+{{#if this.student}}
+  <div class="student-details">
+    <div class="student-face">
+      Mood: {{if this.student.graduated "😀" "😟"}}
+    </div>
+    <div>
+      <strong>Name:</strong> {{this.student.name}}
+    </div>
+    <div>
+      <strong>Graduation Status:</strong>
+      {{#if this.student.graduated}}
+        Graduated!!! <span class="graduated">🎓</span>
+      {{else}}  
+        <i>Still Struggling...</i>
+      {{/if}}
+    </div>
+    <div>
+      <button {{on "click" (fn this.graduateStudent this.student.id)}}>Graduate</button>
+    </div>
+  </div>
+{{/if}}
+
+{{yield}}

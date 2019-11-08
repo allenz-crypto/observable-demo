@@ -1,0 +1,8 @@
+<canvas id="myCanvas" width="500" height="500" {{did-insert this.renderGradient}}></canvas>
+
+<div class="color-grid">
+  <div style={{if this.left (concat "background-color:" this.left) ""}} {{on "click" this.toggleLeftPixelTracker}}></div>
+  <div style={{if this.center (concat "background-color:" this.center) ""}}></div>
+  <div style={{if this.right (concat "background-color:" this.right) ""}} {{on "click" this.toggleRightPixelTracker}}></div>
+</div>
+{{yield}}

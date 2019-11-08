@@ -1,0 +1,18 @@
+<h1>Students</h1>
+<ul class="students-list">
+  {{#each this.students as |student|}}
+    <li>
+      {{student.name}} <span class="graduated">{{if student.graduated "🎓"}}</span>
+      <button {{on "click" (fn this.graduateStudent student.id)}}>
+        Graduate
+      </button>
+      <button {{on "click" (fn this.selectStudent student.id)}}>
+        View
+      </button>
+    </li>
+  {{/each}}
+</ul>
+
+<StudentDetails />
+
+{{yield}}
